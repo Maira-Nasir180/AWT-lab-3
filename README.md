@@ -42,27 +42,26 @@ Server runs on `http://localhost:3000`
 | POST | /graphql | GraphQL endpoint (GraphiQL UI available in browser) |
 
 ## Error Response Format
+<img width="317" height="193" alt="Screenshot 2026-09-22 213325" src="https://github.com/user-attachments/assets/007c038e-15c6-4061-a9a6-0e0369a79577" />
 
-{
-"error_code": "PRODUCT_NOT_FOUND",
-"message": "Product with this ID does not exist",
-"timestamp": "2026-09-22T10:15:30.000Z"
-}
+
+
+
 
 
 ## Example: Field Selection (Over-fetching solution)
 
 GET /api/v1/products/1?fields=title,price
+<img width="383" height="208" alt="Screenshot 2026-09-22 213535" src="https://github.com/user-attachments/assets/7f7856e9-424c-4572-bab7-9f2ce6e60446" />
+
+
 
 
 ## Example: GraphQL Query
 
-{
-product(id: "1") {
-title
-price
-}
-}
+<img width="959" height="470" alt="Screenshot 2026-09-22 213914" src="https://github.com/user-attachments/assets/e9799825-5c93-4891-9353-bad0837c4b24" />
+
+
 
 
 ## Example: Idempotent Order Creation
@@ -73,6 +72,8 @@ Body: { "productId": "1", "quantity": 2 }
 
 
 Sending this same request again (same key) returns the same order instead of creating a duplicate.
+<img width="541" height="413" alt="Screenshot 2026-09-22 214147" src="https://github.com/user-attachments/assets/40ae4d17-211f-42d0-b6a2-e5a9491048e1" />
+
 
 ## Tech Stack
 
