@@ -84,19 +84,24 @@ Sending this same request again (same key) returns the same order instead of cre
 ## Testing Screenshots (Postman)
 
 ### 1. POST - Create Product (201 Created)
-![POST Create](screenshots/1-post-create.png)
+<img width="959" height="539" alt="Screenshot 2026-09-22 204818" src="https://github.com/user-attachments/assets/a67a7915-66ab-459b-8b6f-2f8c750b97ec" />
+
 
 ### 2. POST - Validation Error (400 Bad Request)
-![Validation Error](screenshots/2-post-validation-error.png)
+<img width="536" height="422" alt="Screenshot 2026-09-22 210925" src="https://github.com/user-attachments/assets/10c8f7d3-94d2-4fa2-9782-342203c57aed" />
+
 
 ### 3. PUT - Idempotent Update (200 OK)
 Sending the same PUT request twice returns the same result without corrupting state.
-![PUT Idempotent](screenshots/3-put-idempotent.png)
+<img width="533" height="416" alt="Screenshot 2026-09-22 210953" src="https://github.com/user-attachments/assets/f8fa075d-2e6e-4ca7-921b-9e0810bffca7" />
+
 
 ### 4. DELETE Product (204 No Content)
 Deleting the same product again returns 404 Not Found.
-![DELETE](screenshots/4-delete.png)
+<img width="536" height="425" alt="Screenshot 2026-09-22 211011" src="https://github.com/user-attachments/assets/0319ffac-2423-49bf-ac4b-ac5e9a1aa0a7" />
+
 
 ### 5. Order Creation with Idempotency-Key
 Sending the same order request twice (same Idempotency-Key) returns the same order ID instead of creating a duplicate — this solves the duplicate payment/order problem.
-![Idempotency Key Test](screenshots/5-order-idempotency.png)
+<img width="541" height="407" alt="Screenshot 2026-09-22 211238" src="https://github.com/user-attachments/assets/c32f0e75-d975-4d70-b88e-cf4ce81a45cb" />
+
